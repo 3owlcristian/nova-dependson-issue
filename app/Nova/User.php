@@ -13,15 +13,6 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 class User extends Resource
 {
     /**
-     * The number of results to display when searching for relatable resources without Scout.
-     *
-     * @var int|null
-     */
-    public static $relatableSearchResults = 100;
-
-    public static $perPageViaRelationship = 20;
-
-    /**
      * The model the resource corresponds to.
      *
      * @var class-string<\App\Models\User>
@@ -33,7 +24,7 @@ class User extends Resource
      *
      * @var string
      */
-    // public static $title = 'name';
+    public static $title = 'name';
 
     /**
      * The columns that should be searched.
@@ -41,18 +32,8 @@ class User extends Resource
      * @var array
      */
     public static $search = [
-        'id', 'name', 'email', 'roles.name',
+        'id', 'name', 'email',
     ];
-
-    /**
-     * Get the value that should be displayed to represent the resource.
-     *
-     * @return string
-     */
-    public function title()
-    {
-        return $this->name . ' ' . $this->surname;
-    }
 
     /**
      * Get the fields displayed by the resource.
@@ -68,7 +49,7 @@ class User extends Resource
             Gravatar::make()->maxWidth(50),
 
             Text::make('Name')
-                ->hideFromIndex()
+                ->sortable()
                 ->rules('required', 'max:255'),
 
             Text::make('Email')
