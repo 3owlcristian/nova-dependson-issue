@@ -43,6 +43,7 @@ class ContactInformation extends Resource
      */
     public function fields(NovaRequest $request)
     {
+        //Select dependson issue
         $counties = \App\Models\County::select('id', 'name')->get();
         $counties_arr = [];
         foreach ($counties as $key => $counties) {
