@@ -1,0 +1,62 @@
+.nc-picker.absolute {
+    position: relative !important;
+}
+.sidebar-item-label svg {
+    margin-right: 0.5rem;
+}
+
+td.simple-repeatable-detail-field-wrapper div {
+    margin-right: unset !important;
+}
+
+td.simple-repeatable-detail-field-wrapper p {
+    width: 100% !important;
+    display: block !important;
+    text-align: center !important;
+}
+
+.order-export-action {
+    width: 130px;
+}
+
+div table[dusk~="resource-table"] thead tr th:last-child,
+div table[data-testid~="resource-table"] thead tr th:last-child {
+    width: 100% !important;
+}
+
+[dusk="users-index-component"] table[dusk~="resource-table"] .rounded-full {
+	max-width: 30px !important;
+}
+[dusk="clinics-index-component"] table[dusk~="resource-table"] .rounded-full {
+	width: auto !important;
+    border-radius: 0 !important;
+    max-width: fit-content !important;
+}
+	
+[dusk="dashboard-main"] .grid>div:not(.px-6) {
+    padding: 15px 0;
+}
+
+.editable .text-danger {
+    display: none;
+}
+
+.multiselect {
+    display: flex !important;
+}
+
+.nova-select-plus-vs .vs__dropdown-toggle{
+    border-color:  rgba(var(--colors-gray-300)) !important;
+}
+
+.project-products-table-field-wrapper .md\:w-1\/4 {
+    display: none !important;
+}
+
+.project-products-table-field-wrapper .md\:w-3\/4 {
+    width: 100% !important;
+}
+
+[dusk="sidebar-menu"] i {
+	min-width: 30px
+}
